@@ -1,0 +1,30 @@
+version: 2.1
+
+executors:
+  integration_executor:
+    machine:
+      image: ubuntu-1604:201903-01
+    environment:
+      PYENV_VERSION: 3.7.0
+
+commands:
+  integration_test:
+    description: Reproducing issue
+    steps:
+      - run:
+          name: apt update
+          command: |
+              sudo apt update
+              sudo apt install -y libmysqlclient-dev
+
+jobs: 
+  run_integration_test:
+    executor: integration_executor
+    steps:
+      - integration_test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - run_integration_test
