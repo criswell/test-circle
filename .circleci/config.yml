@@ -14,8 +14,8 @@ commands:
       - run:
           name: apt update
           command: |
-              sudo apt update
-              sudo apt install -y libmysqlclient-dev
+              sudo apt-get update
+              sudo apt-get install -y libmysqlclient-dev
 
 jobs: 
   run_integration_test:
