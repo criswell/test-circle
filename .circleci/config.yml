@@ -3,7 +3,7 @@ version: 2.1
 executors:
   integration_executor:
     machine:
-      image: ubuntu:xenial-20200326
+      image: circleci/classic:latest
     environment:
       PYENV_VERSION: 3.7.0
 
