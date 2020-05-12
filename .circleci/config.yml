@@ -14,6 +14,8 @@ commands:
       - run:
           name: apt update
           command: |
+              wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+              wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
               sudo apt update
               sudo apt install -y libmysqlclient-dev
 
