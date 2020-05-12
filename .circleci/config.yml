@@ -3,7 +3,7 @@ version: 2.1
 executors:
   integration_executor:
     machine:
-      image: ubuntu-1604:201903-01
+      image: ubuntu:xenial-20200326
     environment:
       PYENV_VERSION: 3.7.0
 
