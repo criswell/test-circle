@@ -12,10 +12,9 @@ commands:
     description: Reproducing issue
     steps:
       - run:
-          name: apt update
+          name: friendly neighborhood spodermon
           command: |
-              sudo apt update
-              sudo apt install -y libmysqlclient-dev
+              env
 
 jobs: 
   run_integration_test:
